@@ -58,6 +58,32 @@ export default function Login(){
         <p className="">Bem-vindo visitante</p>
         )}
       </div>
+
+      <div className="mx-auto w-[40%]">
+        <form onSubmit={onSubmit} className="frmEditarUsuario">
+            <fieldset>
+                <legend>Usuário</legend>
+                <div>
+                    <label htmlFor="idNomeUsuario">Nome de usuário:</label>
+                    <input
+                    type="text"
+                    id="idNomeUsuario"
+                    className="bg-amber-50"
+                    {...register("nomeUsuario", { required: true, maxLength: 200, minLength: 3 })}
+                    aria-invalid={!!errors.nomeUsuario}
+                    aria-describedby={errors.nomeUsuario ? "nomeUsuario-error" : undefined}
+              />
+              {errors.nomeUsuario && (
+                <span
+                  role="alert"
+                  id="nomeUsuario-error"
+                  className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2"
+                >Nome de usuário inválido!</span>
+              )}
+            </div>
+            </fieldset>
+        </form>
+      </div>
     </main>
   );
 }
