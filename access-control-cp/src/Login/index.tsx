@@ -38,4 +38,15 @@ export default function Login(){
       alert("Erro ao autenticar usuário.");
     }
   });
+
+  const handleLogout = ()=>{
+    localStorage.removeItem("usuarioLogado")
+    window.location.reload();
+  };
+
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado") || "null")
+
+  return(
+
+  );
 }
