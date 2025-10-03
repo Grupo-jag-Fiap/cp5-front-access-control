@@ -100,6 +100,11 @@ export default function Login(){
                 >Email inválido.</span>
               )}
             </div>
+
+            <div className="mt-4 flex gap-2">
+              <button type="submit">Login</button>
+              <button type="button" onClick={() => navigate("/cadastro")}>Cadastrar-se</button>
+            </div>
             </fieldset>
         </form>
       </div>
