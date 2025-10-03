@@ -4,7 +4,6 @@ import type { TipoUsuario } from "../types/tipoUsuario";
 
 const API_URL = import.meta.env.VITE_API_URL_USUARIOS;
 
-
 export default function Login(){
     const navigate = useNavigate();
 
@@ -47,6 +46,18 @@ export default function Login(){
   const usuario = JSON.parse(localStorage.getItem("usuarioLogado") || "null")
 
   return(
-
+    <main>
+        <h1 className="text-center bg-amber-100">Login</h1>
+      <div className="text-center">
+      {usuario ? (
+      <div className="usuario-logado">
+        <p className="bemvindo">Bem-vindo, {usuario.nome}</p>
+        <button onClick={handleLogout} className="logout-btn">Sair</button>
+      </div>
+        ) : (
+        <p className="">Bem-vindo visitante</p>
+        )}
+      </div>
+    </main>
   );
 }
