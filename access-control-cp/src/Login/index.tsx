@@ -11,4 +11,31 @@ export default function Login(){
   const { register, handleSubmit, formState: { errors } } = useForm<TipoUsuario>({
     mode: "onChange"
   });
+
+  const onSubmit = handleSubmit(async (data: TipoUsuario) => {
+    try {
+
+      const res = await fetch(API_URL);
+      const usuarios: TipoUsuario[] = await res.json();
+
+
+      const usuarioValido = usuarios.find(
+        (u) =>
+          u.nomeUsuario.toLowerCase() === data.nomeUsuario.toLowerCase() && u.email.toLowerCase() === data.email.toLowerCase()
+      );
+
+      if (!usuarioValido) {
+        alert("Usuário não cadastrado!");
+        return;
+      }
+
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuarioValido));
+      alert(`Bem-vindo ${usuarioValido.nomeUsuario}`);
+
+
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao autenticar usuário.");
+    }
+  });
 }
