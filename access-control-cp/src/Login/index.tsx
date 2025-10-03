@@ -81,6 +81,25 @@ export default function Login(){
                 >Nome de usuário inválido!</span>
               )}
             </div>
+
+            <div>
+              <label htmlFor="idEmail">E-mail do usuário:</label>
+              <input
+                type="email"
+                id="idEmail"
+                className="bg-amber-50"
+                {...register("email", { required: true, minLength: 5, maxLength: 255 })}
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-error" : undefined}
+              />
+              {errors.email && (
+                <span
+                  role="alert"
+                  id="email-error"
+                  className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2"
+                >Email inválido.</span>
+              )}
+            </div>
             </fieldset>
         </form>
       </div>
