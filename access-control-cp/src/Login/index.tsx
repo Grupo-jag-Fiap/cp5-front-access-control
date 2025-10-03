@@ -77,7 +77,7 @@ export default function Login(){
                 <span
                   role="alert"
                   id="nomeUsuario-error"
-                  className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2"
+                  className="text-red-600 "
                 >Nome de usuário inválido!</span>
               )}
             </div>
@@ -96,7 +96,7 @@ export default function Login(){
                 <span
                   role="alert"
                   id="email-error"
-                  className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2"
+                  className="text-red-600 "
                 >Email inválido.</span>
               )}
             </div>
