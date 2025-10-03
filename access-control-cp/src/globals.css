@@ -32,6 +32,10 @@
       }
     }
   }
+  .logout-btn{
+        @apply w-[5%] py-2 px-4 bg-red-500 text-white font-bold rounded hover:bg-red-600 transition-colors;
+
+  }
   
 
   
