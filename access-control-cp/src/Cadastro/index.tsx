@@ -42,10 +42,16 @@ export default function Cadastro(){
     }
   });
 
+  const handleLogout = () => {
+    localStorage.removeItem("usuarioLogado");
+    window.location.reload();
+  };
+
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado") || "null");
+
   return (
     <main>
       <h1>Cadastrar usuários</h1>
     </main>
   );
 }
-
