@@ -49,9 +49,20 @@ export default function Cadastro(){
 
   const usuario = JSON.parse(localStorage.getItem("usuarioLogado") || "null");
 
+
   return (
     <main>
       <h1>Cadastrar usuários</h1>
+      <div className="text-center bg-amber-100">
+        {usuario ? (
+          <div className="usuario-logado">
+            <p className="bemvindo">Bem-vindo, {usuario.nome}</p>
+            <button onClick={handleLogout} className="logout-btn">Sair</button>
+          </div>
+        ) : (
+          <p className="text-gray-700 font-medium mb-4">Bem-vindo visitante</p>
+        )}
+      </div>
     </main>
   );
 }
