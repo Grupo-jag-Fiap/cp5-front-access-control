@@ -50,7 +50,7 @@ export default function Cadastro(){
   const usuario = JSON.parse(localStorage.getItem("usuarioLogado") || "null");
 
 
-  return (
+ return (
     <main>
       <h1>Cadastrar usuários</h1>
       <div className="text-center bg-amber-100">
@@ -63,6 +63,30 @@ export default function Cadastro(){
           <p className="text-gray-700 font-medium mb-4">Bem-vindo visitante</p>
         )}
       </div>
+
+      <div className="mx-auto w-[40%]">
+        <form onSubmit={onSubmit} className="frmEditarUsuario">
+          <fieldset>
+            <legend>Usuário</legend>
+            <div>
+              <label htmlFor="idNome">Nome:</label>
+              <input type="text" id="idNome" {...register("nome")} />
+            </div>
+            <div>
+              <label htmlFor="idNomeUsuario">Nome de usuário:</label>
+              <input type="text" id="idNomeUsuario" {...register("nomeUsuario")} />
+            </div>
+            <div>
+              <label htmlFor="idEmail">E-mail do usuário:</label>
+              <input type="email" id="idEmail" {...register("email")} />
+            </div>
+            <div>
+              <button type="submit">Cadastrar</button>
+              <button onClick={() => navigateLogin("/")}>Login</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </main>
-  );
+  );;
 }
