@@ -4,11 +4,13 @@
 • Projeto para: Front-end Design Engineering.
 #### • Desenvolvedores presentes no projeto:
 
-| Integrantes                 | Número RM | Classe |
-| --------------------------- | --------- | ------ |
-| André Emygdio Ferreira      | 565592    | 1TDSPG |
-| João Victor Nascimento Adão | 563409    | 1TDSPG |
-|                             |           |        |
+| Integrantes                     | Número RM    | Classe   |
+| ------------------------------- | ------------ | -------- |
+| André Emygdio Ferreira          | 565592       | 1TDSPG   |
+| João Victor Nascimento Adão     | 563409       | 1TDSPG   |
+| ------------------------------- | ------------ | -------- |
+
+
 • O projeto apresentado se trata de um projeto de uma página de cadastro e login, utilizando as seguintes tecnologias:
 
 | Tecnologias Utilizadas:                                                                                                      |
