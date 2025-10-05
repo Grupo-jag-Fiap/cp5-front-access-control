@@ -52,11 +52,12 @@ export default function Cadastro(){
 
      return(
  <main>
-      <h1>Cadastrar usuários</h1>
-      <div className="text-center bg-amber-100">
+      <h1 className="text-center bg-amber-100">Cadastrar usuários</h1>
+      <div className="text-center">
       {usuario ? (
         <div className="usuario-logado">
           <p className="bemvindo">Bem-vindo, {usuario.nome}</p>
+          <p>{usuario.email}</p>
           <button onClick={handleLogout} className="logout-btn">Sair</button>
         </div>
         ) : (

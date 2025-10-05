@@ -52,6 +52,7 @@ export default function Login(){
       {usuario ? (
       <div className="usuario-logado">
         <p className="bemvindo">Bem-vindo, {usuario.nome}</p>
+        <p>{usuario.email}</p>
         <button onClick={handleLogout} className="logout-btn">Sair</button>
       </div>
         ) : (
