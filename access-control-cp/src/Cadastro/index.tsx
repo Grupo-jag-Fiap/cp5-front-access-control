@@ -70,15 +70,27 @@ export default function Cadastro(){
             <legend>Usuário</legend>
             <div>
               <label htmlFor="idNome">Nome:</label>
-              <input type="text" id="idNome" {...register("nome")} />
+              <input
+              type="text"
+               id="idNome"
+              {...register("nome", { required: true, maxLength: 200, minLength: 3 })}
+              />
             </div>
             <div>
               <label htmlFor="idNomeUsuario">Nome de usuário:</label>
-              <input type="text" id="idNomeUsuario" {...register("nomeUsuario")} />
+              <input
+              type="text"
+              id="idNomeUsuario"
+              {...register("nomeUsuario", { required: true, maxLength: 200, minLength: 3 })}
+              />
             </div>
             <div>
               <label htmlFor="idEmail">E-mail do usuário:</label>
-              <input type="email" id="idEmail" {...register("email")} />
+              <input
+              type="email"
+              id="idEmail"
+              {...register("email", { required: true, minLength: 5, maxLength: 255 })}
+              />
             </div>
             <div>
               <button type="submit">Cadastrar</button>
