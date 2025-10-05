@@ -17,7 +17,7 @@ export default function Cadastro(){
       const res = await fetch(API_URL);
       const usuarios: TipoUsuario[] = await res.json();
 
-      const usuarioJaExiste = usuarios.filter(
+      const usuarioJaExiste = usuarios.find(
         (u) =>
           u.nomeUsuario.toLowerCase() === data.nomeUsuario.toLowerCase() &&
           u.email.toLowerCase() === data.email.toLowerCase()
